@@ -1,0 +1,2 @@
+# TypeScriptTask1
+JavaScript
