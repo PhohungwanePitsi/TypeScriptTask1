@@ -1,94 +1,39 @@
+type Employee = {
+  fullName: [string, string]; // Tuple: [firstName, lastName]
+  age: number;
+  department: string;
+  skills: string[];
+  isActive: boolean;
+};
 
-const employee1 = {
-  fullName: ["Tshepiso", "Elton"],
+
+const employee1: Employee = {
+  fullName: ["John", "Doe"],
   age: 30,
   department: "Engineering",
   skills: ["JavaScript", "Python", "C++"],
-  isActive: true,
+  isActive: true
 };
 
-const employee2 = {
-  fullName: ["Tetelo", "Calvin"],
-  age: 27,
-  department: "Marketing",
-  skills: ["SEO", "Content Writing", "Social Media"],
-  isActive: false,
-};
-
-
-function logEmployee(employee) {
-  console.log("--- Employee Details ---");
-  console.log(`Name      : ${employee.fullName[0]} ${employee.fullName[1]}`);
-  console.log(`Age       : ${employee.age}`);
-  console.log(`Department: ${employee.department}`);
-  console.log(`Skills    : ${employee.skills.join(", ")}`);
-  console.log(`Active    : ${employee.isActive ? "Yes" : "No"}`);
-  console.log(); // line break
-}
-
-
-logEmployee(employee1);
-logEmployee(employee2);
-
-const employee1 = {
-  fullName: ["Tshepiso", "Elton"],
-  age: 30,
-  department: "Engineering",
-  skills: ["JavaScript", "Python", "C++"],
-  isActive: true,
-};
-
-const employee2 = {
-  fullName: ["Tetelo", "Calvin"],
-  age: 27,
-  department: "Marketing",
-  skills: ["SEO", "Content Writing", "Social Media"],
-  isActive: false,
-};
-
-
-function logEmployee(employee) {
-  console.log("--- Employee Details ---");
-  console.log(`Name      : ${employee.fullName[0]} ${employee.fullName[1]}`);
-  console.log(`Age       : ${employee.age}`);
-  console.log(`Department: ${employee.department}`);
-  console.log(`Skills    : ${employee.skills.join(", ")}`);
-  console.log(`Active    : ${employee.isActive ? "Yes" : "No"}`);
-  console.log(); // line break
-}
-
-
-logEmployee(employee1);
-logEmployee(employee2);
-
-const employee1 = {
-  fullName: ["Tshepiso", "Elton"],
-  age: 30,
-  department: "Engineering",
-  skills: ["JavaScript", "Python", "C++"],
-  isActive: true,
-};
-
-const employee2 = {
-  fullName: ["Tetelo", "Calvin"],
+const employee2: Employee = {
+  fullName: ["Jane", "Smith"],
   age: 25,
   department: "Marketing",
-  skills: ["SEO", "Content Writing", "Social Media"],
-  isActive: false,
+  skills: ["SEO", "Social Media", "Content Creation"],
+  isActive: false
 };
 
 
-function logEmployee(employee) {
+function logEmployee(emp: Employee): void {
   console.log("--- Employee Details ---");
-  console.log(`Name      : ${employee.fullName[0]} ${employee.fullName[1]}`);
-  console.log(`Age       : ${employee.age}`);
-  console.log(`Department: ${employee.department}`);
-  console.log(`Skills    : ${employee.skills.join(", ")}`);
-  console.log(`Active    : ${employee.isActive ? "Yes" : "No"}`);
-  console.log(); // line break
+  console.log(`Name: ${emp.fullName[0]} ${emp.fullName[1]}`);
+  console.log(`Age: ${emp.age}`);
+  console.log(`Department: ${emp.department}`);
+  console.log(`Skills: ${emp.skills.join(", ")}`);
+  console.log(`Active: ${emp.isActive ? "Yes" : "No"}`);
+  console.log("------------------------");
 }
 
 
 logEmployee(employee1);
 logEmployee(employee2);
-
